@@ -7,15 +7,36 @@ A project that demonstrates how to make a simple HTTP/2 server under Node.JS
 
 Running the command above will create two files:
 
-`localhost-cert.pem` and `localhost-privkey.pem`
+**Step 2:** Confirm the certificates are created
 
-**Step 2:** Move the files to the directory, `certs`
+`ls | grep .pem`
 
-`mv localhost-cert.pem ./certs/localhost-cert.pem`
+You'll get the following output:
 
-`mv localhost-privkey.pem ./certs/localhost-privkey.pem`
+```
+localhost-cert.pem
+localhost-privkey.pem
+```
 
-**Step 3:** In you Chrome browser, enter the following in the address bar...
+**Step 3:** Move the files to the directory, `certs`
+
+`mkdir --parents ./certs; mv localhost-cert.pem $_`
+
+`mkdir --parents ./certs; mv localhost-privkey.pem $_`
+
+**Step 4:** Confirm the directory, `certs`:
+
+`ls certs -l`
+
+You'll get output similar to the following:
+
+```text
+total 8
+-rw-r--r-- 1 root root 1094 Feb 12 01:16 localhost-cert.pem
+-rw-r--r-- 1 root root 1704 Feb 12 01:16 localhost-privkey.pem
+```
+
+**Step 5:** In you Chrome browser, enter the following in the address bar...
 
 `chrome://flags/#allow-insecure-localhost`
  
@@ -23,12 +44,12 @@ Running the command above will create two files:
 
 `Allow invalid certificates for resources loaded from localhost.`
 
-**Step 4:** Start the HTTP/2 server
+**Step 6:** Start the HTTP/2 server
 
 `node index.js`
 
 
-**Step 5:** In your Chrome browser call:
+**Step 7:** In your Chrome browser call:
 
 `https://localhost:3030/stream`
 
