@@ -1,0 +1,22 @@
+{
+  "name": "simple-http2-server",
+  "version": "1.0.0",
+  "description": "A project that demonstrates how to make a simple HTTP/2 server under Node.JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reselbob/simple-http2-server.git"
+  },
+  "keywords": [
+    "HTTP/2"
+  ],
+  "author": "Bob Reselman <reselbob@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reselbob/simple-http2-server/issues"
+  },
+  "homepage": "https://github.com/reselbob/simple-http2-server#readme"
+}
